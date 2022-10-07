@@ -27,11 +27,13 @@ function area (l1, l2) {
 */
 
 console.log("\n---------------Exercisde 2------------------")
-function crazySum(x6, x8) {
-  return 6*8
-  console.log(crazySum)
+
+function crazySum (x4, y8) {
+  console.log(x4 + y8)  
 }
- 
+crazySum(2, 6)
+
+
 
 /* EXERCISE 3
  Write a function called "crazyDiff" that computes the absolute difference between a given number and 19.
@@ -44,7 +46,17 @@ function crazySum(x6, x8) {
  Write a function called "boundary" which accept an integer parameter n and returns true if n is within 20 and 100 (included) or if n it's equal to 400.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n---------------Exercisde 4------------------")
+function boundary(n) {
+  return ((Math.abs(100 - n) <= 20) ||
+	 (Math.abs(400 - n) <= 20));
+}
+
+console.log(boundary(10));
+console.log(boundary(90));
+console.log(boundary(99));
+console.log(boundary(199));
+console.log(boundary(200));
 
 /* EXERCISE 5
  Write a function called "strivify" which accepts a string as a parameter.
@@ -53,30 +65,72 @@ function crazySum(x6, x8) {
 
 /* WRITE YOUR ANSWER HERE */
 
+  
+
 /* EXERCISE 6
  Write a function called "check3and7" which accepts a positive number as a parameter and checks if it is a multiple of 3 or a multiple of 7.
  HINT: Modulus Operator
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n---------------Exercisde 6------------------")
+function check3and7(x = 2) 
+{
+  if (x % 3 == 0 || x % 7 == 0) 
+  {
+    return true;
+  } 
+  else {
+    return false;
+  }
+}
+
+console.log(check3and7(12));
+console.log(check3and7(14));
+console.log(check3and7(10));
+console.log(check3and7(11));
 
 /* EXERCISE 7
  Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n---------------Exercisde 7------------------")
+
+function reverseString(str) 
+{
+    return str.split("").reverse().join("");
+}
+
+console.log(reverseString("Strive"));
+
 
 /* EXERCISE 8
  Write a function called "upperFirst" which capitalizes the first letter of each word of a given string passed as a parameter.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n---------------Exercisde 8------------------")
+
+function upperFirst(str) {
+  const title = str
+    .toLowerCase()
+    .split(' ')
+    .map(word => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(' ');
+
+  return title;
+}
+console.log(upperFirst('hello world and epicode'));
 
 /* EXERCISE 9
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n---------------Exercisde 9------------------")
+function cutString(str) {
+  return str.substring(1, str.length - 1);
+}
+console.log(cutString('Asdren Jerliu'));
 
 /* EXERCISE 10
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
