@@ -127,6 +127,7 @@ console.log(upperFirst('hello world and epicode'));
 */
 
 console.log("\n---------------Exercisde 9------------------")
+
 function cutString(str) {
   return str.substring(1, str.length - 1);
 }
@@ -136,7 +137,16 @@ console.log(cutString('Asdren Jerliu'));
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-/* WRITE YOUR ANSWER HERE */
+console.log("\n---------------Exercisde 10------------------")
+
+function giveMeRandom(n) {
+  let arrWithNums = [];
+  for(i = 0; i < n; i++) {
+      arrWithNums.push(Math.floor(Math.random() * 10)); 
+  }
+  return arrWithNums;
+}
+console.log(giveMeRandom(8));
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
