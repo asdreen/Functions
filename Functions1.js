@@ -5,13 +5,33 @@
  The function should return the sum of just the numbers bigger than 5.
 */
 
+function checkArray(giveMeRandom)
+{
+  
+return giveMeRandom[Math.floor(Math.random()*giveMeRandom.length)];
+     
+}
+
+var giveMeRandom = [2, 4, 12, 35, 43];
+console.log(checkArray(giveMeRandom));
+
+
 /* WRITE YOUR ANSWER HERE */
 
 /* EXTRA 2
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "shoppingCartTotal" which calculates the total due to the shop.
 */
-
+const shoppingCart = [
+    {price: 5,name: "product", id: 1, salary: 10},
+  ];
+  
+  const sum = shoppingCart.reduce((accumulator, object) => {
+    return accumulator + object.salary;
+  }, 0);
+  
+  console.log(sum);
+  
 /* WRITE YOUR ANSWER HERE */
 
 /* EXTRA 3
